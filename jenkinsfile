@@ -1,0 +1,22 @@
+pipeline {
+    agent any 
+    stages {
+        stage('install client dependency') { 
+            steps {
+               sh "cd client"
+               sh "npm  install"
+            }
+        }
+        stage('install servers dependency') { 
+            steps {
+                sh "cd server"
+                sh "npm install" 
+            }
+        }
+        stage('Deploy') { 
+            steps {
+                // 
+            }
+        }
+    }
+}
