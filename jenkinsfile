@@ -3,20 +3,15 @@ pipeline {
     stages {
         stage('install client dependency') { 
             steps {
-               sh "cd client"
-               sh "npm  install"
+               sh "cd client && npm install"
             }
         }
         stage('install servers dependency') { 
             steps {
-                sh "cd server"
-                sh "npm install" 
+                sh "cd .."
+                sh "cd client && npm install" 
             }
         }
-        stage('Deploy') { 
-            steps {
-                // 
-            }
-        }
+      
     }
 }
