@@ -12,6 +12,9 @@ pipeline {
                 sh "cd client && npm install" 
             }
         }
-      
+        stage ('run npm') { 
+            steps { 
+                sh"cd npm install"
+            }    
     }
 }
