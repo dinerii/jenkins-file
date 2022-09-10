@@ -14,7 +14,7 @@ pipeline {
         }
         stage ('run npm') { 
             steps { 
-                sh"npm start"
+                sh "npm start"
             }    
         }
     }
